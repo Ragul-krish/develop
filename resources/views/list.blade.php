@@ -1,5 +1,30 @@
 <h1>list of members</h1>
-<table border="1">
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+<table border="1"id="customers">
 <tr>
  <td>ID</td>
  <td>firstName</td>
@@ -8,7 +33,7 @@
 </tr>
 @foreach ($employees as $employee)
 <tr>
-<td>I{{$employee['id']}}</td>
+<td>{{$employee['id']}}</td>
  <td>{{$employee['name']}}</td>
  <td>{{$employee['lstname']}}</td>
  <td>{{$employee['address']}}</td>

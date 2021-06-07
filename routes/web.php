@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\Usercontroller;
+use App\Http\controllers\Userpath;
 
 
 /*
@@ -14,6 +15,7 @@ use App\Http\controllers\Usercontroller;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 //Route::get('/welcome', function () {
   //return view('welcome');
   //});
@@ -45,8 +47,9 @@ use App\Http\controllers\Usercontroller;
   //});
   
   //Route ::view ('list',[Usercontroller::class,'index']);
-  Route::get('list','Usercontroller@getData'); 
-  Route::view('add','add'); 
-  Route::post('add','Usercontroller@index');
-  
+  Route::get('list','Usercontroller@getData');          // databse list
+  Route::view('add','add');                               //database  add
+  Route::post('add','Usercontroller@index');             // "
+  //Route::view ("login",'login');
+  //Route::post("user",'Userpath@userLogin');
 
