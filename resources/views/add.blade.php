@@ -4,7 +4,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<h1>.......................adding Data......................</h1> 
+<h1>.......................add the user into data......................</h1> 
 
 <form action="add" method="POST">
 @csrf

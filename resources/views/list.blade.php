@@ -30,6 +30,8 @@
  <td>firstName</td>
  <td>lastName</td>
  <td>address</td>
+ <td>operations</td>
+ <td>operations</td>
 </tr>
 @foreach ($employees as $employee)
 <tr>
@@ -37,6 +39,8 @@
  <td>{{$employee['name']}}</td>
  <td>{{$employee['lstname']}}</td>
  <td>{{$employee['address']}}</td>
+ <td><a href={{"delete/".$employee['id']}}>delete</a></td>
+ <td><a href={{"edit/".$employee['id']}}>edit</a></td>
 </tr>
 
 @endforeach

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\controllers\Usercontroller;
-use App\Http\controllers\Userpath;
+use App\Http\controllers\UserController;
+//use App\Http\controllers\UserpathController;
 
 
 /*
@@ -29,7 +29,7 @@ use App\Http\controllers\Userpath;
   //Route::get('/lists', function()
   //{
    //   return view('hello');
-  //}
+  //}Userpath
   //Route::get('/','App\Http\controllers\users@index');
   //Route::get('/users',[users::class,'index']);
   //insert data
@@ -47,9 +47,15 @@ use App\Http\controllers\Userpath;
   //});
   
   //Route ::view ('list',[Usercontroller::class,'index']);
-  Route::get('list','Usercontroller@getData');          // databse list
+  //Route::get('list','Usercontroller@getData');          // databse list
   Route::view('add','add');                               //database  add
-  Route::post('add','Usercontroller@index');             // "
-  //Route::view ("login",'login');
-  //Route::post("user",'Userpath@userLogin');
+  Route::post('add','UserController@add');             // "
 
+
+    //Route::get('list','Usercontroller@list');
+    Route::get('delete/{id}','UserController@deleteData');
+
+    Route::get('list','UserController@listData');
+    Route::get('edit/{id}','UserController@showData');
+    Route::post('edit','UserController@update');
+  
